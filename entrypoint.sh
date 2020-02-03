@@ -16,4 +16,6 @@ find /etc/bind -type f -exec chmod 644 {} \;
 chown -R named:named /var/log/named
 find /etc/bind -type f -exec chmod 644 {} \;
 
+/usr/bin/install -d -o root -g named -m 0770 /var/run/named
+
 exec $*
